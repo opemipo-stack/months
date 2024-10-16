@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .hold-div {
+            display: flex;
+            flex-direction: column;
+            margin: auto;
+            margin-top: 100px;
+            width: 400px;
+            height: fit-content;
+            background-image: url(download.png);
+            background-size: 400px auto;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        #divMain {
+            width: 70%;
+            height: 50px;
+            background-color: white;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 50px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding-top: 15px;
+        }
+        #inputMain {
+            width: 70%;
+            height: 40px;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 10px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        #btnMain {
+            width: 100px;
+            padding: 10px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 20px;
+            margin-bottom: 50px;
+        }
+        #btnMain:hover {
+            transform: scale(1.1);
+            transition: all 0.1s linear;
+            font-size: 16px;
+        }
+        #btnMain:focus-within {
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="hold-div">
+    <div id="divMain"><b>WELCOME!!!</b></div>
+    <input type="text" id="inputMain" placeholder="enter a month">
+    <button id="btnMain" onclick="show()">click here</button>
+</div>
+</body>
+</html>
+
+<script>
+ 
+ function show() {
+    let input = document.getElementById('inputMain')
+    // let button = document.getElementById('btnMain')
+    // let div = document.getElementById('divMain')
+    input = input.value.trim().toLowerCase()
+
+
+
+    if (input === 'january') {
+        divMain.innerHTML = 'january has 31 days in it'
+    } else if (input === 'february') {
+        divMain.innerHTML = 'february has 29 days in it'
+    } else if (input === 'march') {
+        divMain.innerHTML = 'marrch has 31 days in it'
+    } else if (input === 'april') {
+        divMain.innerHTML = 'april has 30 days in it'
+    } else if (input === 'may') {
+        divMain.innerHTML = 'may has 31 days in it'
+    } else if (input === 'june') {
+        divMain.innerHTML = 'june has 30 days in it'
+    }  else if (input === 'july') {
+        divMain.innerHTML = 'july has 31 days in it'
+    }  else if (input === 'august') {
+        divMain.innerHTML = 'august has 31 days in it'
+    }  else if (input === 'september') {
+        divMain.innerHTML = 'semptember has 30 days in it'
+    }  else if (input === 'october') {
+        divMain.innerHTML = 'october has 31 days in it'
+    }  else if (input === 'november') {
+        divMain.innerHTML = 'november has 30 days in it'
+    }  else if (input === 'december') {
+        divMain.innerHTML = 'december has 31 days in it'
+    } else {
+        alert('invalid input!!!')
+        divMain.innerHTML = 'type in a valid month name...'
+    }
+ }
+
+
+</script>
